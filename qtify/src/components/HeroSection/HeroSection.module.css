@@ -1,0 +1,44 @@
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  height: 270px;
+}
+.heroContent {
+/* background-color: blueviolet; */
+  width: 799px;
+  height: 212px;
+  top: 103px;
+  left: 327px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.heroImage{
+    width: 212px;
+height: 212px;
+top: 103px;
+left: 914px;
+
+}
+.textContent {
+  width: 556px;
+  height: 100px;
+  top: 171px;
+  left: 327px;
+}
+.typography {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.herocontent {
+  height: 212px;
+  width: 799px;
+}
