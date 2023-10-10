@@ -1,27 +1,50 @@
-.heroSection {
+.hero{
+  display:flex;
+  height: 270px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-black);
+  gap: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* my initial approach */
+
+/* .heroSection {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
   height: 270px;
 }
 .heroContent {
-/* background-color: blueviolet; */
   width: 799px;
   height: 212px;
   top: 103px;
   left: 327px;
   display: flex;
   align-items: center;
-  
 }
 
-.heroImage{
-    width: 212px;
-height: 212px;
-top: 103px;
-left: 914px;
-
+.heroImage {
+  width: 212px;
+  height: 212px;
+  top: 103px;
+  left: 914px;
 }
 .textContent {
   width: 556px;
@@ -41,4 +64,4 @@ left: 914px;
 .herocontent {
   height: 212px;
   width: 799px;
-}
+} */
