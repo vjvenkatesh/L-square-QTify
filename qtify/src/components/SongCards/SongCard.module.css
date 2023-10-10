@@ -30,18 +30,17 @@
   background-color: rgb(255, 255, 255);
 }
 .bottomButton {
-  width: 50%;
-  height: 60%;
-  margin: 7px;
+  width:48%;
+  height: 70%;
+  margin: 5px;
   background-color: black;
   border: 1px solid black;
   color: #ffffff;
-  border-radius: 20px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 10px;
   font-weight: 400;
   line-height: 15px;
-  letter-spacing: 0px;
   text-align: left;
 }
 
