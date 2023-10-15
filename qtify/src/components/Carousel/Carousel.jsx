@@ -9,7 +9,6 @@ import "swiper/css";
 const Controls = ({ data }) => {
   const swiper = useSwiper();
 
-  console.log(swiper);
   useEffect(() => {
     swiper.slideTo(0, null);
   }, [data]);
@@ -32,7 +31,7 @@ const Carousel = ({ data, renderComponent }) => {
         <CarouselLeftNavigation />
         <CarouselRightNavigation />
         {data.map((item) => (
-          <SwiperSlide key={item.title}>{renderComponent(item)}</SwiperSlide>
+          <SwiperSlide key={item.id}>{renderComponent(item)}</SwiperSlide>
         ))}
       </Swiper>
     </div>

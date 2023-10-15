@@ -3,6 +3,8 @@ import styles from "./Card.module.css";
 import {Chip, Tooltip} from '@mui/material'
 
 const Card = ({ data, type }) => {
+
+  
   const getCard = (type) => {
     switch (type) {
       case "album": {
@@ -22,6 +24,25 @@ const Card = ({ data, type }) => {
           
           </div>
           </Tooltip>
+        );
+      }
+      case "song": {
+        const { image, likes, title, durationInMs } = data;
+        return (
+          <Tooltip title={`${durationInMs} Seconds`} placement='top' arrow>
+          <div className={styles.wrapper}>
+          <div className={styles.card}>
+            <img src={image} alt="album"/>
+            <div className={styles.banner}>
+              <Chip label={`${likes} Likes`} size="small" className={styles.chip}></Chip>
+            </div>
+            </div>
+            <div className={styles.titleWrapper}>
+                <p>{title}</p>
+            </div>
+          
+          </div>
+         </Tooltip>
         );
       }
       default:return <></>;
