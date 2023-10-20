@@ -2,10 +2,6 @@ import React from "react";
 import styles from "./AutoCompleteSearch.module.css";
 
 const AutoCompleteSearch = ({ data ,selected}) => {
-    const handleSearch=(value)=>{
-        // console.log(value);
-
-    }
 
   return (
     <div className={styles.Wrapper}>
