@@ -6,6 +6,7 @@ const AutoCompleteSearch = ({ data ,selected}) => {
         // console.log(value);
 
     }
+
   return (
     <div className={styles.Wrapper}>
       {data.length > 1
@@ -15,10 +16,11 @@ const AutoCompleteSearch = ({ data ,selected}) => {
                 <img src={item.image} alt="Images" className={styles.image}/>
                 <div className={styles.titles}>
                 <p className={styles.titles}>{item.title}</p>
-                <p className={styles.author}>{item.artists}</p>
+                {item.artists === undefined ? <p className={styles.author}>{item.slug}</p>:<p className={styles.author}>{item.artists}</p>}
+                
                 </div>
                 </div>
-                {item.follows > 1 ? (<p>{item.follows} Follows</p>):null}
+                {item.follows === undefined  ? (<p>{item.likes} Likes</p>):(<p>{item.follows} Follows</p>)}
                 
                 
             </div>;
