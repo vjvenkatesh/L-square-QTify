@@ -17,6 +17,7 @@ function App() {
   const [topAlbumsData,setTopAlbumsData]=useState([]);
   const [newAlbumsData,setNewAlbumsData]=useState([]);
   const [songData,setSongData]=useState([]);
+  const [entireData,setEntireData]=useState([]);
   const [genresData,setGenresData]=useState([]);
   const [faqs,setFaqs]=useState([]);
   useEffect(()=>{
@@ -39,15 +40,17 @@ function App() {
     GenresData.unshift(newGenre);
     setGenresData(GenresData);
     setFaqs(fetchFaq);
+
+    setEntireData([...TopData,...NewData,...SongData]);
   }
 
 
   
-
+console.log("entire ",entireData);
 
   return (
     <div className="App">
-        <Navbar/>
+        <Navbar data={entireData}/>
         <HeroSection/>
    
         {/* <CardSection/> */}

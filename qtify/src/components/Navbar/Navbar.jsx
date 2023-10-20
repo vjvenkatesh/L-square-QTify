@@ -4,11 +4,11 @@ import styles from './Navbar.module.css';
 import Logo from '../Logo/Logo';
 import Search from '../Search/Search';
 
-const Navbar = () => {
+const Navbar = ({data}) => {
   return (
     <nav className={styles.navbar}>
         <Logo/>
-        <Search/>
+        <Search placeholder="Search a album of your choice" data={data}/>
         <Button children="Give Feedback"/>
     </nav>
   )

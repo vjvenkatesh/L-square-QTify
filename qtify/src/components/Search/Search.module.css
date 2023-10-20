@@ -23,6 +23,19 @@
   cursor: pointer;
 }
 
+
+
+
+
+
+.autoComplete{
+  position: absolute;
+  left: 276px;
+  top: 73px;
+  z-index: 2;
+}
+
+
 @media screen and (max-width: 768px) {
   .search {
     display: none;
