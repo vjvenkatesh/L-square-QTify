@@ -46,7 +46,7 @@ function App() {
 
 
   
-console.log("entire ",entireData);
+
 
   return (
     <div className="App">
