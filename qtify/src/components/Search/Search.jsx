@@ -8,20 +8,27 @@ const Search = ({placeholder,data}) => {
   const [val,setVal]=useState(null);
 
   const [resultData,setResultData]=useState([]);
+
+  const[isAutoCompleteVisible,setIsAutoCompleteVisible]=useState(false);
   
   
   const onSubmit=(e)=>{
     // e.preventDefault();
     console.log(e);
-    setVal(null);
+    setVal(e);
+    setIsAutoCompleteVisible(false);
   }
 
   const handleInput=(e)=>{
     console.log(e.target.value);
+    setIsAutoCompleteVisible(true)
     setVal(e.target.value);
     const res=data.filter(item=>item.title.includes(e.target.value));
     // console.log(res);
     setResultData(res);
+    if(e.target.value === ""){
+      setIsAutoCompleteVisible(false);
+    }
   }
 
 
@@ -35,7 +42,7 @@ const Search = ({placeholder,data}) => {
       </button>
     </form>
     <div className={styles.autoComplete}>
-    {val? resultData.length>1?<AutoCompleteSearch data={resultData} selected={onSubmit}/>:null:null}
+    {isAutoCompleteVisible? resultData.length>1?<AutoCompleteSearch data={resultData} selected={onSubmit}/>:null:null}
     </div>
     </>
   );
