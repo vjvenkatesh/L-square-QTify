@@ -14,17 +14,17 @@ const Search = ({placeholder,data}) => {
   
   const onSubmit=(e)=>{
     // e.preventDefault();
-    console.log(e);
+    
     setVal(e);
     setIsAutoCompleteVisible(false);
   }
 
   const handleInput=(e)=>{
-    console.log(e.target.value);
+    
     setIsAutoCompleteVisible(true)
     setVal(e.target.value);
     const res=data.filter(item=>item.title.includes(e.target.value));
-    // console.log(res);
+  
     setResultData(res);
     if(e.target.value === ""){
       setIsAutoCompleteVisible(false);
