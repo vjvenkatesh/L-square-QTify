@@ -22,7 +22,7 @@ const Section = ({ title, data, type, genres }) => {
   };
 
   const handlefilterSongs = () => {
-    console.log(isSelected);
+    
     if (type === "song") {
       if (isSelected === "all") {
         setFilteredSongsData(data);
