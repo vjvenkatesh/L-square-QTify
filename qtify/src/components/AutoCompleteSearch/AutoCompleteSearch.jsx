@@ -18,7 +18,8 @@ const AutoCompleteSearch = ({ data ,selected}) => {
                 <p className={styles.author}>{item.artists}</p>
                 </div>
                 </div>
-                <p>{item.follows} Follows</p>
+                {item.follows > 1 ? (<p>{item.follows} Follows</p>):null}
+                
                 
             </div>;
           })
